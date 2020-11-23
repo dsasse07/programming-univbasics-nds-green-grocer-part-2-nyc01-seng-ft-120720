@@ -45,7 +45,7 @@ def checkout(cart, coupons)
   coupons_applied_cart = apply_coupons(consolidated_cart, coupons)
   all_discounts_applied_cart = apply_clearance(coupons_applied_cart)
   
-  binding.pry
+  
   all_discounts_applied_cart.each do |item_entry|
     total += (item_entry[:price]*item_entry[:count]).round(3)
   end
