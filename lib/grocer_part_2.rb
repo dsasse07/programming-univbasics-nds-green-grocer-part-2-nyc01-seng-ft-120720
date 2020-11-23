@@ -26,6 +26,7 @@ def apply_clearance(cart)
       cart_item[:price] -= (cart_item[:price]*0.20).round(3)
     end
   end
+  cart
 end
 
 def checkout(cart, coupons)
@@ -38,4 +39,6 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  cart = consolidate_cart(cart)
+  apply_coupons
 end
