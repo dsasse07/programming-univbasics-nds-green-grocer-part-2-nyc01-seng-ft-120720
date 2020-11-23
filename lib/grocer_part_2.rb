@@ -6,7 +6,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   binding.pry
-  cart = consolidate_cart(cart)
+  
   cart.each do |cart_item|
     coupons.each do |coupon_item|
       if cart_item[:item] == coupon_item[:item]
