@@ -21,6 +21,7 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  cart.each do |cart_item|
 end
 
 def checkout(cart, coupons)
