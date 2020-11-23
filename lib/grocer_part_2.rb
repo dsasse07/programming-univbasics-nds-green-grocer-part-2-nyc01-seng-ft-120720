@@ -6,6 +6,9 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   binding.pry
+  consolidated cart = consolidate_cart(cart)
+  coupons.each do |coupon_item|
+    coupon_
   
 end
 
