@@ -6,9 +6,15 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   binding.pry
-  consolidated_cart = consolidate_cart(cart)
-  coupons.each do |coupon_item|
-    find_item_by_name_in_collection(coupon_item[:name]
+  cart = consolidate_cart(cart)
+  cart.each do |cart_item|
+    coupons.each do |coupon_item|
+      if cart_item[:item] == coupon_item[:item]
+        cart_item[:count] -= coupon_item[:num]
+        cart << {item: "#{cart_item[:item]} W/ COUPON", price: (coupon_item[:cost]/coupon_item[:num],clearance: cart_item[:clearance], count: coupon_item[:num]}
+      end
+    end
+  end
   
 end
 
