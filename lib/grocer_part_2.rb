@@ -9,7 +9,7 @@ def apply_coupons(cart, coupons)
   cart.each do |cart_item|
     coupons.each do |coupon_item|
       if cart_item[:item] == coupon_item[:item]
-        cart_item[:count] = cart_item[:count] - coupon_item[:num]
+        cart_item[:count] -= coupon_item[:num]
         cart << {:item => "#{cart_item[:item]} W/COUPON", :price => (coupon_item[:cost]/coupon_item[:num]), :clearance => cart_item[:clearance], :count => coupon_item[:num]}
       end
     end
@@ -22,6 +22,8 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   cart.each do |cart_item|
+    if cart_item[:clearance]
+      cart_item[:price] = 
 end
 
 def checkout(cart, coupons)
