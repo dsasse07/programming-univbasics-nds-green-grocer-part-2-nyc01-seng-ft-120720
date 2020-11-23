@@ -5,7 +5,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  binding.pry
+  
   cart = consolidate_cart(cart)
   cart.each do |cart_item|
     coupons.each do |coupon_item|
@@ -15,7 +15,7 @@ def apply_coupons(cart, coupons)
       end
     end
   end
-  binding.pry
+  cart
 end
 
 def apply_clearance(cart)
