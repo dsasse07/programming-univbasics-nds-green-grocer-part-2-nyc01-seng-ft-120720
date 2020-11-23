@@ -12,7 +12,7 @@ def apply_coupons(cart, coupons)
       if cart_item[:item] == coupon_item[:item]
         binding.pry
         cart_item[:count] = cart_item[:count] - coupon_item[:num]
-        
+        binding.pry
         cart << {:item => "#{cart_item[:item]} W/COUPON", :price => (coupon_item[:cost]/coupon_item[:num]), :clearance => cart_item[:clearance], :count => coupon_item[:num]}
       end
     end
