@@ -46,5 +46,5 @@ def checkout(cart, coupons)
   
   all_discounts_applied_cart.each do |item_entry|
     total += (item_entry[:price]*item_entry[:count]).round(3)
-    
+  end
 end
