@@ -8,7 +8,7 @@ def apply_coupons(cart, coupons)
   binding.pry
   consolidated_cart = consolidate_cart(cart)
   coupons.each do |coupon_item|
-    coupon_item[:name]
+    find_item_by_name_in_collection(coupon_item[:name]
   
 end
 
